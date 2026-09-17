@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BungBun うさぎ — หน้าจอออเดอร์ (พนักงาน)</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Mali:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="header-inner">
+    <div class="brand">
+      <img src="assets/logo.png" alt="" style="width:44px;height:44px;border-radius:50%;border:2.5px solid var(--brown);">
+      <div>
+        <span class="brand-name"><span class="font-brand">BungBun</span> <span class="jp">うさぎ</span></span>
+        <span class="brand-tag">หน้าจอออเดอร์ — สำหรับพนักงานเท่านั้น</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap staff-main">
+  <div class="staff-order-list" id="staffOrderList"></div>
+  <p id="staffEmpty" class="staff-empty">กำลังโหลดออเดอร์...</p>
+</main>
+
+<div class="staff-gate" id="staffGate">
+  <div class="staff-gate-box">
+    <span class="game-overlay-emoji">🔒</span>
+    <h3>ใส่รหัสพนักงาน</h3>
+    <p>หน้านี้สำหรับพนักงานเท่านั้น กรุณาใส่รหัสเพื่อเข้าดูออเดอร์</p>
+    <input type="password" id="staffPinInput" class="order-input" placeholder="รหัสผ่าน" inputmode="numeric">
+    <button id="staffPinBtn" class="btn btn-solid">เข้าใช้งาน</button>
+    <p class="staff-pin-error" id="staffPinError"></p>
+  </div>
+</div>
+
+<script type="module" src="staff.js"></script>
+</body>
+</html>

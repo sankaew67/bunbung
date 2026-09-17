@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BungBun うさぎ — a little cup of happiness</title>
+<meta name="description" content="BungBun うさぎ คาเฟ่กระต่ายในจินตนาการ กาแฟ ขนมโฮมเมด และเพื่อนหูยาวน่ารัก">
+<meta name="theme-color" content="#FFF8EC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Mali:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Noto+Sans+JP:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ shared SVG icon library ============ -->
+<svg width="0" height="0" style="position:absolute">
+<defs>
+
+  <symbol id="ic-mug" viewBox="0 0 48 48">
+    <path d="M10 16h22v18a8 8 0 0 1-8 8H18a8 8 0 0 1-8-8V16Z" fill="currentColor" stroke="#5B3A22" stroke-width="2.2"/>
+    <path d="M32 20h3a5 5 0 0 1 0 10h-3" fill="none" stroke="#5B3A22" stroke-width="2.2"/>
+    <ellipse cx="21" cy="16" rx="11" ry="3.4" fill="#FFF8EC" stroke="#5B3A22" stroke-width="1.8"/>
+    <path d="M16 15.4c1.2-2.6 3.4-3.6 5-3.6s3 1.4 5 0c1.6-1.1 3.7-.4 4.6 1.6" fill="none" stroke="#8A5A36" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M13 11c.8-1.6 2.2-1.6 2.2-3.2M19 11c.8-1.6 2.2-1.6 2.2-3.2M25 11c.8-1.6 2.2-1.6 2.2-3.2" stroke="#8A5A36" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".8"/>
+    <ellipse cx="17.5" cy="24" rx="2.2" ry="3.4" fill="#fff" opacity=".35"/>
+  </symbol>
+
+  <symbol id="ic-teacup" viewBox="0 0 48 48">
+    <ellipse cx="22" cy="37" rx="18" ry="4.4" fill="currentColor" opacity=".5"/>
+    <path d="M8 18h26v9a13 13 0 0 1-13 13A13 13 0 0 1 8 27V18Z" fill="currentColor" stroke="#5B3A22" stroke-width="2.2"/>
+    <path d="M34 21h3.5a4.5 4.5 0 0 1 0 9H34" fill="none" stroke="#5B3A22" stroke-width="2"/>
+    <ellipse cx="21" cy="18" rx="13" ry="3" fill="#FFF8EC" stroke="#5B3A22" stroke-width="1.6"/>
+    <circle cx="15" cy="8" r="3" fill="#E8687A" stroke="#5B3A22" stroke-width="1.2"/>
+    <path d="M15 11v3" stroke="#7C9473" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M12 9c1-1.6 2.6-1.6 3-3M18 9c1-1.6 2.6-1.6 3-3" stroke="#8A5A36" stroke-width="1.4" fill="none" stroke-linecap="round" opacity=".7"/>
+  </symbol>
+
+  <symbol id="ic-glass" viewBox="0 0 48 48">
+    <path d="M14 18h20l-2.6 21a4 4 0 0 1-4 3.6H20.6a4 4 0 0 1-4-3.6L14 18Z" fill="currentColor" stroke="#5B3A22" stroke-width="2.2"/>
+    <path d="M16 24l1.6 8M24 24v10M32 24l-1.6 8" stroke="#8A5A36" stroke-width="1.6" stroke-linecap="round" opacity=".6"/>
+    <path d="M14 12c3-3 6.5 2 10-1s6.5 2 10-1" fill="none" stroke="#fff" stroke-width="6.5" stroke-linecap="round"/>
+    <path d="M14 12c3-3 6.5 2 10-1s6.5 2 10-1" fill="none" stroke="#5B3A22" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+    <circle cx="24" cy="8" r="3.4" fill="#E8687A" stroke="#5B3A22" stroke-width="1.2"/>
+    <path d="M24 5c1-2 3-2 3-4" stroke="#7C9473" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+    <rect x="30" y="2" width="2.4" height="16" rx="1.2" fill="#F3A0AC" stroke="#5B3A22" stroke-width="1" transform="rotate(12 30 2)"/>
+  </symbol>
+
+  <symbol id="ic-soda" viewBox="0 0 48 48">
+    <path d="M11 14h26l-2.4 23.5a4 4 0 0 1-4 3.6H17.4a4 4 0 0 1-4-3.6L11 14Z" fill="currentColor" stroke="#5B3A22" stroke-width="2.2"/>
+    <path d="M11 14h26" stroke="#5B3A22" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="19" cy="22" r="1.7" fill="#fff" opacity=".8"/><circle cx="27" cy="27" r="1.7" fill="#fff" opacity=".8"/><circle cx="21" cy="32" r="1.3" fill="#fff" opacity=".8"/>
+    <path d="M12.5 14c2-3 5.5 1.5 9-1s5.5 1.5 9-1 5.5 1.5 5.5 1.5" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+    <rect x="29" y="2" width="2.4" height="17" rx="1.2" fill="#E8687A" stroke="#5B3A22" stroke-width="1" transform="rotate(10 29 2)"/>
+    <circle cx="18" cy="10" r="2.6" fill="#E8687A" stroke="#5B3A22" stroke-width="1"/>
+  </symbol>
+
+  <symbol id="ic-jar" viewBox="0 0 48 48">
+    <path d="M14 10h20v4l2 3v20a5 5 0 0 1-5 5H17a5 5 0 0 1-5-5V17l2-3V10Z" fill="currentColor" stroke="#5B3A22" stroke-width="2.2"/>
+    <rect x="13" y="6" width="22" height="6" rx="2" fill="#8A5A36" stroke="#5B3A22" stroke-width="1.8"/>
+    <circle cx="20" cy="26" r="2.2" fill="#E8687A" opacity=".85"/><circle cx="27" cy="31" r="2.2" fill="#F0BE4B" opacity=".85"/><circle cx="24" cy="22" r="2" fill="#fff" opacity=".7"/>
+    <rect x="25" y="1" width="2.2" height="15" rx="1.1" fill="#F3A0AC" stroke="#5B3A22" stroke-width="1" transform="rotate(-8 25 1)"/>
+    <path d="M15 34c-2-1.6-1-4 1.4-3.4" stroke="#5B3A22" stroke-width="1.4" fill="none" stroke-linecap="round" opacity=".5"/>
+  </symbol>
+
+  <symbol id="ic-cake" viewBox="0 0 48 48">
+    <ellipse cx="24" cy="41" rx="19" ry="3" fill="#FCEEDA" stroke="#5B3A22" stroke-width="1.4"/>
+    <path d="M8 39 24 9l16 30Z" fill="currentColor" stroke="#5B3A22" stroke-width="2.2" stroke-linejoin="round"/>
+    <path d="M12 32h24M15.5 24h17" stroke="#fff" stroke-width="2.6" opacity=".75"/>
+    <path d="M24 9c1 2.6-2 4-1 6.4s3.4 1.8 3 4.4" stroke="#8A5A36" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".6"/>
+    <circle cx="24" cy="7.5" r="3" fill="#E8687A" stroke="#5B3A22" stroke-width="1.2"/>
+    <path d="M24 4.5c.6-1.6 2-1.6 2-3.2" stroke="#7C9473" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="ic-roll" viewBox="0 0 48 48">
+    <circle cx="24" cy="24" r="17" fill="currentColor" stroke="#5B3A22" stroke-width="2.2"/>
+    <path d="M24 24c0-5.6 4.6-10 10-10a10 10 0 0 1 0 20c-5.4 0-10-4.4-10-10Z" fill="none" stroke="#fff" stroke-width="2.2" opacity=".8"/>
+    <path d="M24 24c0-3 2.4-5.4 5.4-5.4a5.4 5.4 0 0 1 0 10.8c-3 0-5.4-2.4-5.4-5.4Z" fill="#fff" opacity=".55"/>
+    <circle cx="24" cy="9" r="2.6" fill="#E8687A" stroke="#5B3A22" stroke-width="1"/>
+    <circle cx="10" cy="14" r="1.4" fill="#fff" opacity=".8"/><circle cx="37" cy="16" r="1.2" fill="#fff" opacity=".8"/><circle cx="14" cy="34" r="1.3" fill="#fff" opacity=".8"/>
+  </symbol>
+
+  <symbol id="ic-dango" viewBox="0 0 48 48">
+    <path d="M24 8v34" stroke="#8A5A36" stroke-width="2.2"/>
+    <circle cx="24" cy="13" r="7.2" fill="currentColor" stroke="#5B3A22" stroke-width="2"/>
+    <circle cx="24" cy="24" r="7.2" fill="currentColor" stroke="#5B3A22" stroke-width="2"/>
+    <circle cx="24" cy="35" r="7.2" fill="currentColor" stroke="#5B3A22" stroke-width="2"/>
+    <ellipse cx="21.5" cy="10.5" rx="1.8" ry="1.2" fill="#fff" opacity=".75"/>
+    <ellipse cx="21.5" cy="21.5" rx="1.8" ry="1.2" fill="#fff" opacity=".75"/>
+    <ellipse cx="21.5" cy="32.5" rx="1.8" ry="1.2" fill="#fff" opacity=".75"/>
+  </symbol>
+
+  <symbol id="ic-cookie" viewBox="0 0 48 48">
+    <circle cx="24" cy="24" r="17" fill="currentColor" stroke="#5B3A22" stroke-width="2.2"/>
+    <ellipse cx="18" cy="17" rx="5" ry="3.2" fill="#fff" opacity=".3"/>
+    <circle cx="17" cy="19" r="2.2" fill="#5B3A22"/><circle cx="29" cy="17" r="2.2" fill="#5B3A22"/>
+    <circle cx="31" cy="28" r="2.2" fill="#5B3A22"/><circle cx="19" cy="30" r="2.2" fill="#5B3A22"/>
+    <circle cx="25" cy="24" r="2.2" fill="#5B3A22"/>
+  </symbol>
+
+  <symbol id="ic-tart" viewBox="0 0 48 48">
+    <path d="M5 29c1.6 1.6 3.2-1.6 4.8 0s3.2-1.6 4.8 0 3.2-1.6 4.8 0 3.2-1.6 4.8 0 3.2-1.6 4.8 0 3.2-1.6 4.8 0 3.2-1.6 4.4 0" fill="none" stroke="#8A5A36" stroke-width="3" stroke-linecap="round"/>
+    <path d="M6 29a18 6 0 0 0 36 0Z" fill="currentColor" stroke="#5B3A22" stroke-width="2.2"/>
+    <path d="M8 28 24 11l16 17Z" fill="#FCEEDA" stroke="#5B3A22" stroke-width="2.2" stroke-linejoin="round"/>
+    <circle cx="18" cy="23" r="2.6" fill="#E8687A"/><circle cx="27" cy="19" r="2.6" fill="#E8687A"/><circle cx="31" cy="26" r="2.6" fill="#7C9473"/>
+    <circle cx="17" cy="21.6" r=".8" fill="#fff"/><circle cx="26" cy="17.6" r=".8" fill="#fff"/>
+  </symbol>
+
+</defs>
+</svg>
+
+<header class="site">
+  <div class="header-inner">
+    <div class="brand">
+      <button class="logo-btn" id="logoBtn" aria-label="กระต่าย BungBun ทักทาย">
+        <img src="assets/logo.png" alt="โลโก้ BungBun うさぎ">
+        <span class="runner-track" id="runnerTrack"></span>
+      </button>
+      <div>
+        <span class="brand-name"><span class="font-brand">BungBun</span> <span class="jp">うさぎ</span></span>
+        <span class="brand-tag">coffee · bakes · bunnies</span>
+      </div>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="เปิดเมนู">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">หน้าแรก</a>
+      <a href="#menu">เมนูของเรา</a>
+      <a href="#order">สั่งอาหาร</a>
+      <a href="#rabbits">เพื่อนหูยาว</a>
+      <a href="#game">เล่นเกม</a>
+      <a href="#story">เรื่องราวของร้าน</a>
+      <a href="#visit">แวะมาหาเรา</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="sparkle-field"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">✿ your little happy place</span>
+      <h1>พักใจสักนิด แล้วมาจิบความสุข<br>กับ <em class="font-brand">BungBun うさぎ</em> ด้วยกันนะ ♡</h1>
+      <p class="lead">กาแฟหอมๆ ขนมอบอุ่นๆ และเจ้าหูยาวตัวจริง ที่รอเติมรอยยิ้มให้วันธรรมดาของคุณ</p>
+      <div class="cta-row">
+        <a href="#menu" class="btn btn-solid">ดูเมนูอร่อย ๆ</a>
+        <a href="#rabbits" class="btn btn-ghost">รู้จักเพื่อนหูยาวของเรา</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="hero-art-frame">
+        <img src="assets/hero.jpg" alt="ภาพวาดกระต่ายบาริสต้ากับกาแฟและเค้กในคาเฟ่อบอุ่น">
+        <span class="hero-art-tag">✿ good coffee, good cake, a happier day</span>
+      </div>
+      <p class="hero-note">baked with love, served with a smile</p>
+    </div>
+  </div>
+</section>
+
+<span class="scallop"><svg viewBox="0 0 400 20" preserveAspectRatio="none"><path d="M0 0 Q10 20 20 0 Q30 20 40 0 Q50 20 60 0 Q70 20 80 0 Q90 20 100 0 Q110 20 120 0 Q130 20 140 0 Q150 20 160 0 Q170 20 180 0 Q190 20 200 0 Q210 20 220 0 Q230 20 240 0 Q250 20 260 0 Q270 20 280 0 Q290 20 300 0 Q310 20 320 0 Q330 20 340 0 Q350 20 360 0 Q370 20 380 0 Q390 20 400 0 V20 H0 Z" fill="#FFF8EC"/></svg></span>
+
+<section id="menu">
+  <div class="sparkle-field"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-head-deco">🌸 ☕ 🌼</div>
+      <span class="eyebrow">something sweet, something special</span>
+      <h2>ความอร่อยที่อยากให้ลอง ♡</h2>
+      <p>ทำด้วยใจ ในทุกแก้วและทุกจาน</p>
+    </div>
+
+    <div class="menu-tabs">
+      <button class="tab-btn active" data-tab="drinks">เครื่องดื่ม</button>
+      <button class="tab-btn" data-tab="desserts">ขนมหวาน</button>
+    </div>
+
+    <div class="menu-panel active" id="panel-drinks">
+      <div class="menu-grid" id="grid-drinks"></div>
+    </div>
+    <div class="menu-panel" id="panel-desserts">
+      <div class="menu-grid" id="grid-desserts"></div>
+    </div>
+
+    <p class="menu-note">เมนูและราคาเป็นตัวอย่างสำหรับเว็บไซต์คอนเซ็ปต์</p>
+  </div>
+</section>
+
+<section id="order">
+  <div class="sparkle-field"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-head-deco">🧾 🐇 🧾</div>
+      <span class="eyebrow">สั่งเลยไม่ต้องรอคิว</span>
+      <h2>สั่งอาหารออนไลน์</h2>
+      <p>เลือกเมนู กดยืนยัน แล้วรอรับที่เคาน์เตอร์ได้เลย</p>
+    </div>
+
+    <div class="menu-tabs">
+      <button class="tab-btn order-tab-btn active" data-order-tab="drinks">เครื่องดื่ม</button>
+      <button class="tab-btn order-tab-btn" data-order-tab="desserts">ขนมหวาน</button>
+    </div>
+
+    <div class="order-layout">
+      <div class="order-list">
+        <div class="order-panel active" id="order-panel-drinks"></div>
+        <div class="order-panel" id="order-panel-desserts"></div>
+      </div>
+
+      <div class="order-cart" id="orderCart">
+        <h3>ตะกร้าของคุณ</h3>
+        <div class="order-cart-items" id="orderCartItems">
+          <p class="order-cart-empty">ยังไม่ได้เลือกเมนูเลยนะ</p>
+        </div>
+        <div class="order-cart-total">
+          <span>รวมทั้งหมด</span>
+          <strong id="orderCartTotal">฿0</strong>
+        </div>
+        <input type="text" id="orderNote" class="order-input" placeholder="ชื่อ/โต๊ะ (ถ้ามี) เช่น โต๊ะ 4">
+        <button id="orderSubmitBtn" class="btn btn-solid order-submit-btn" disabled>ยืนยันสั่งอาหาร</button>
+        <p class="order-status" id="orderStatusMsg"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rabbits">
+  <div class="sparkle-field"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-head-deco">🎀 🐇 🎀</div>
+      <span class="eyebrow">a little home, a little happiness</span>
+      <h2>รู้จักเพื่อนหูยาวของเรา</h2>
+      <p>กระต่ายตัวจริงทั้ง 7 ตัวประจำร้าน คอยต้อนรับทุกคนที่แวะมา</p>
+    </div>
+    <div class="rabbit-grid" id="rabbitGrid"></div>
+  </div>
+</section>
+
+<section id="game">
+  <div class="sparkle-field"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-head-deco">🎮 🐇 🎮</div>
+      <span class="eyebrow">เล่นเพลิน ๆ ระหว่างรอ</span>
+      <h2>มุมเกมของร้าน</h2>
+      <p>เลือกเกมที่อยากเล่นได้เลย เกมสั้นๆ เล่นจบไว ไม่ทำให้ลืมรออาหาร</p>
+    </div>
+
+    <div class="menu-tabs game-tabs">
+      <button class="tab-btn game-tab-btn active" data-game="whack">ตีกระต่ายคาบแครอท</button>
+      <button class="tab-btn game-tab-btn" data-game="runner">วิ่งเก็บแครอท</button>
+    </div>
+
+    <div class="game-panel active" id="panel-whack">
+      <div class="game-wrap">
+        <div class="game-hud">
+          <div class="game-stat">คะแนน<span id="gameScore">0</span></div>
+          <div class="game-stat">เวลา<span id="gameTime">30</span></div>
+          <div class="game-stat">สถิติสูงสุด<span id="gameBest">0</span></div>
+        </div>
+
+        <div class="game-field" id="gameField">
+          <!-- holes injected by game.js -->
+          <div class="game-overlay" id="gameOverlay">
+            <span class="game-overlay-emoji">🥕</span>
+            <h3>พร้อมจะจับกระต่ายหรือยัง?</h3>
+            <p>เกมสั้น ๆ 30 วินาที แตะกระต่ายให้ทันก่อนมันหลบ ระวังอย่าแตะโดนน้องหมา!</p>
+            <div class="game-promo">🎁 ตีกระต่ายให้ได้ <strong>20 ตัวขึ้นไป</strong> รับเครื่องดื่มฟรี 1 แก้ว! แคปหน้าจอผลคะแนนไปยื่นพนักงานหน้าเคาน์เตอร์ได้เลย</div>
+            <button id="gameStartBtn" class="btn btn-solid">เริ่มเกม</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-panel" id="panel-runner">
+      <div class="runner-wrap">
+        <div class="game-hud">
+          <div class="game-stat">คะแนน<span id="runnerScore">0</span></div>
+          <div class="game-stat">เวลา<span id="runnerTime">30</span></div>
+          <div class="game-stat">ชีวิต<span id="runnerLives">♡♡♡</span></div>
+          <div class="game-stat">สถิติสูงสุด<span id="runnerBest">0</span></div>
+        </div>
+
+        <div class="runner-field" id="runnerField">
+          <div class="runner-lane-line" style="left:33.333%"></div>
+          <div class="runner-lane-line" style="left:66.666%"></div>
+          <div class="runner-player" id="runnerPlayer"><img src="assets/game-bunny1.png" alt=""></div>
+          <div class="game-overlay" id="runnerOverlay">
+            <span class="game-overlay-emoji">🥕</span>
+            <h3>วิ่งเก็บแครอทให้ได้เยอะที่สุด!</h3>
+            <p>แตะฝั่งซ้าย/ขวาของสนาม หรือกดปุ่มลูกศร ←→ เพื่อสลับเลน หลบก้อนหินให้ทัน มีชีวิต 3 ดวง เก็บแครอทให้ได้เยอะที่สุดใน 30 วินาที</p>
+            <button id="runnerStartBtn" class="btn btn-solid">เริ่มวิ่ง</button>
+          </div>
+        </div>
+
+        <div class="runner-controls">
+          <button id="runnerLeftBtn" class="runner-btn" aria-label="เลนซ้าย">◀</button>
+          <button id="runnerRightBtn" class="runner-btn" aria-label="เลนขวา">▶</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap story-grid">
+    <div class="story-badge">🐇</div>
+    <div class="story-text">
+      <h2>บ้านหลังเล็ก ของความสุขหูยาว</h2>
+      <p><span class="font-brand">BungBun</span> うさぎ เริ่มต้นจากภาพฝันเรียบง่าย — มีมุมเล็ก ๆ ให้ทุกคนวางความวุ่นวายลง แล้วใช้เวลากับกาแฟดี ๆ ขนมโฮมเมด และความน่ารักของเจ้ากระต่าย</p>
+      <p>จะมานั่งอ่านหนังสือ คุยกับคนโปรด หรือใช้เวลาเงียบๆ กับตัวเอง ที่นี่มีมุมสบายรออยู่เสมอ</p>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="sparkle-field"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-head-deco">✧ ♡ ✧</div>
+      <span class="eyebrow">come for coffee, stay for the cozy</span>
+      <h2>วันว่างครั้งหน้า มาหาเจ้าหูยาวกันนะ</h2>
+      <p>พื้นที่สำหรับที่อยู่ เวลาเปิดร้าน และช่องทางติดต่อของเรา</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card">
+        <div class="visit-icon">⌂</div>
+        <h3>ที่ตั้งร้าน</h3>
+        <p>เพิ่มที่อยู่และลิงก์แผนที่ของร้าน (เร็ว ๆ นี้)</p>
+      </div>
+      <div class="visit-card ready">
+        <div class="visit-icon">◷</div>
+        <h3>เวลาเปิด–ปิด</h3>
+        <p class="big">ทุกวัน 9:00–23:00 น.</p>
+      </div>
+      <div class="visit-card ready">
+        <div class="visit-icon">♡</div>
+        <h3>ติดตามความน่ารัก</h3>
+        <div class="social-links">
+          <a href="https://www.instagram.com/sankaew_25?stkn=dXJwNmY1bnd3aDJs" target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" fill="none"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="#E8687A" stroke-width="1.8"/><circle cx="12" cy="12" r="4.3" stroke="#E8687A" stroke-width="1.8"/><circle cx="17.6" cy="6.4" r="1.1" fill="#E8687A"/></svg>
+            Instagram
+          </a>
+          <a href="https://www.facebook.com/phak.bung.sk.2025" target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9.5" stroke="#E8687A" stroke-width="1.8"/><path d="M13.8 8.4h-1.6c-.9 0-1.4.6-1.4 1.5v1.6H9.6v2.2h1.2v5.3h2.4v-5.3h1.7l.3-2.2h-2v-1.2c0-.5.2-.8.9-.8h1.1V8.4Z" fill="#E8687A"/></svg>
+            Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="โลโก้ BungBun うさぎ">
+      <span class="brand-name"><span class="font-brand">BungBun</span> <span class="jp">うさぎ</span></span>
+    </div>
+    <p>เว็บไซต์คอนเซ็ปต์สำหรับผลงานออกแบบ · ไม่ใช่ร้านที่เปิดให้บริการจริง</p>
+    <p>Made with a little love ♡</p>
+  </div>
+</footer>
+
+<script src="menu-data.js"></script>
+<script src="script.js"></script>
+<script src="game.js"></script>
+<script src="game-runner.js"></script>
+<script type="module" src="order.js"></script>
+</body>
+</html>
